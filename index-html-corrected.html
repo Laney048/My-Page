@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laney Lu | Data Analyst</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        
+        /* Video Background */
+        .video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .video-bg video {
+            min-width: 100%;
+            min-height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 0;
+        }
+        
+        /* Content Styles */
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 2rem;
+            color: #fff;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+        
+        .intro {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            line-height: 1.8;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: transparent;
+            color: #fff;
+            text-decoration: none;
+            border: 2px solid #fff;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+            margin-top: 1rem;
+        }
+        
+        .btn:hover {
+            background: #fff;
+            color: #333;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .intro {
+                font-size: 1rem;
+            }
+            
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Video Background -->
+        <div class="video-bg">
+            <video autoplay loop muted playsinline>
+                <source src="embrace-the-nature.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="overlay"></div>
+        </div>
+        
+        <!-- Content -->
+        <div class="content">
+            <img src="profile-photo.jpg" alt="Laney Lu" class="profile-img">
+            <h1>Laney Lu</h1>
+            <p class="intro">
+                A passionate data analyst focused on data analysis and evidence-based reasoning, 
+                with an identity rooted in rational thinking and a steadfast belief in the reliability 
+                of data-driven decisions. I see the world through a lens where data integrity and 
+                analytical precision form the cornerstone of impactful decision-making.
+            </p>
+            <a href="about.html" class="btn">ABOUT ME</a>
+        </div>
+    </div>
+</body>
+</html>
