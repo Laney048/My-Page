@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laney Lu | Data Analyst</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .hero-container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        
+        /* Video Background */
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .video-bg video {
+            min-width: 100%;
+            min-height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 0;
+        }
+        
+        /* Hero Content Styles */
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 2rem;
+            color: #fff;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+        
+        .intro {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            line-height: 1.8;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: transparent;
+            color: #fff;
+            text-decoration: none;
+            border: 2px solid #fff;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+            margin-top: 1rem;
+        }
+        
+        .btn:hover {
+            background: #fff;
+            color: #333;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Skills Section Styles */
+        .skills-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 4rem 2rem;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            position: relative;
+            color: #333;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #4dabf7;
+        }
+        
+        .skill-category {
+            margin-bottom: 2.5rem;
+        }
+        
+        .category-title {
+            font-size: 1.4rem;
+            color: #4dabf7;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+        
+        .skill-list {
+            list-style-type: none;
+        }
+        
+        .skill-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .skill-list li:before {
+            content: '•';
+            color: #4dabf7;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .scroll-indicator i {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-20px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .intro {
+                font-size: 1rem;
+            }
+            
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .category-title {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content {
+                padding: 1rem;
+            }
+            
+            .skills-section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+    <!-- FontAwesome for scroll icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Hero Section with Video Background -->
+    <div class="hero-container">
+        <!-- Video Background -->
+        <div class="video-bg">
+            <video autoplay loop muted playsinline>
+                <source src="embrace-the-nature.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="overlay"></div>
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <img src="profile-photo.jpg" alt="Laney Lu" class="profile-img">
+            <h1>Laney Lu</h1>
+            <p class="intro">
+                A passionate data analyst focused on data analysis and evidence-based reasoning, 
+                with an identity rooted in rational thinking and a steadfast belief in the reliability 
+                of data-driven decisions. I see the world through a lens where data integrity and 
+                analytical precision form the cornerstone of impactful decision-making.
+            </p>
+            <a href="about.html" class="btn">ABOUT ME</a>
+            
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+                <p>Scroll to see my skills</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <div class="container">
+            <h2 class="section-title">My Skills & Experience</h2>
+            
+            <div class="skill-category">
+                <h3 class="category-title">Technical Skills</h3>
+                <ul class="skill-list">
+                    <li><strong>Programming & Data Analysis:</strong> Proficient in Python, R, SQL, SPSS, Minitab, and Microsoft Excel.</li>
+                    <li><strong>Machine Learning & AI:</strong> Experience in TensorFlow, predictive modeling, decision trees, neural networks, clustering, and transfer learning.</li>
+                    <li><strong>Database & Big Data Technologies:</strong> Knowledge of Snowflake, data warehousing, and data mining.</li>
+                    <li><strong>Visualization & Business Intelligence:</strong> Skilled in Tableau, data visualization, and strategic market analysis.</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3 class="category-title">Professional Experience</h3>
+                <ul class="skill-list">
+                    <li><strong>System Testing & Optimization:</strong> Developed dynamic scheduling forms, performed SQL-based data validation, and created anomaly detection models for personnel management.</li>
+                    <li><strong>Market Research & Strategic Planning:</strong> Conducted AI-related market analyses, evaluated digital economy trends, and identified technological strengths and weaknesses.</li>
+                    <li><strong>Project Leadership:</strong> Led AI-driven projects such as wildfire detection using MobileNetV2 and YOLOv8, as well as air quality forecasting with machine learning.</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3 class="category-title">Project & Research Experience</h3>
+                <ul class="skill-list">
+                    <li><strong>AI in Wildfire Detection:</strong> Designed an advanced wildfire detection system using deep learning models for real-time monitoring and emergency response.</li>
+                    <li><strong>Air Quality Prediction:</strong> Built predictive models using decision trees, AdaBoost, and neural networks to forecast air pollution trends.</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3 class="category-title">Soft Skills</h3>
+                <ul class="skill-list">
+                    <li><strong>Strong Analytical & Problem-Solving Skills:</strong> Ability to derive insights from data to inform business and technical decisions.</li>
+                    <li><strong>Communication & Collaboration:</strong> Experience working with cross-functional teams and effectively documenting technical processes.</li>
+                    <li><strong>Project Management & Agile Methodologies:</strong> Familiar with Agile practices, strategic decision-making, and team coordination.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
