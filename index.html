@@ -52,7 +52,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.55);
+            background: rgba(0, 0, 0, 0.35); /* Lighter overlay for better video visibility */
             z-index: -1;
         }
         
@@ -117,14 +117,14 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         
-        /* Skills Section Styles - More transparent background */
+        /* Skills Section Styles - Much more transparent background */
         .skills-section {
-            background: rgba(0, 0, 0, 0.4); /* Increased transparency */
+            background: rgba(255, 255, 255, 0.15); /* Very light white background */
             padding: 4rem 2rem;
             color: #fff;
             position: relative;
             z-index: 1;
-            backdrop-filter: blur(3px); /* Slight blur to improve text readability */
+            backdrop-filter: blur(1px); /* Very slight blur */
         }
         
         .container {
@@ -138,7 +138,7 @@
             margin-bottom: 2.5rem;
             position: relative;
             color: #fff;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Text shadow to improve visibility */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Stronger text shadow for readability */
         }
         
         .section-title:after {
@@ -152,9 +152,15 @@
             background-color: #4dabf7;
         }
         
+        .skills-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
         .skill-category {
-            margin-bottom: 2.5rem;
-            background: rgba(0, 0, 0, 0.3); /* Subtle background for each category */
+            margin-bottom: 1.5rem;
+            background: rgba(0, 0, 0, 0.25); /* Very subtle background */
             padding: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -165,9 +171,7 @@
             color: #4dabf7;
             margin-bottom: 1rem;
             font-weight: 600;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            padding-bottom: 0.5rem;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
         }
         
         .skill-list {
@@ -175,10 +179,10 @@
         }
         
         .skill-list li {
-            margin-bottom: 0.8rem;
-            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+            padding-left: 1.2rem;
             position: relative;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9); /* Strong text shadow for better readability */
         }
         
         .skill-list li:before {
@@ -193,6 +197,7 @@
         .skill-list li strong {
             color: #4dabf7;
             font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
         }
         
         /* Scroll indicator */
@@ -245,6 +250,10 @@
             .category-title {
                 font-size: 1.2rem;
             }
+            
+            .skills-categories {
+                grid-template-columns: 1fr;
+            }
         }
         
         @media (max-width: 480px) {
@@ -296,45 +305,47 @@
         </div>
     </div>
     
-    <!-- Skills Section - Now with more transparent background -->
+    <!-- Skills Section - Ultra transparent background -->
     <section class="skills-section">
         <div class="container">
             <h2 class="section-title">My Skills & Experience</h2>
             
-            <div class="skill-category">
-                <h3 class="category-title">Technical Skills</h3>
-                <ul class="skill-list">
-                    <li><strong>Programming & Data Analysis:</strong> Proficient in Python, R, SQL, SPSS, Minitab, and Microsoft Excel.</li>
-                    <li><strong>Machine Learning & AI:</strong> Experience in TensorFlow, predictive modeling, decision trees, neural networks, clustering, and transfer learning.</li>
-                    <li><strong>Database & Big Data Technologies:</strong> Knowledge of Snowflake, data warehousing, and data mining.</li>
-                    <li><strong>Visualization & Business Intelligence:</strong> Skilled in Tableau, data visualization, and strategic market analysis.</li>
-                </ul>
-            </div>
-            
-            <div class="skill-category">
-                <h3 class="category-title">Professional Experience</h3>
-                <ul class="skill-list">
-                    <li><strong>System Testing & Optimization:</strong> Developed dynamic scheduling forms, performed SQL-based data validation, and created anomaly detection models for personnel management.</li>
-                    <li><strong>Market Research & Strategic Planning:</strong> Conducted AI-related market analyses, evaluated digital economy trends, and identified technological strengths and weaknesses.</li>
-                    <li><strong>Project Leadership:</strong> Led AI-driven projects such as wildfire detection using MobileNetV2 and YOLOv8, as well as air quality forecasting with machine learning.</li>
-                </ul>
-            </div>
-            
-            <div class="skill-category">
-                <h3 class="category-title">Project & Research Experience</h3>
-                <ul class="skill-list">
-                    <li><strong>AI in Wildfire Detection:</strong> Designed an advanced wildfire detection system using deep learning models for real-time monitoring and emergency response.</li>
-                    <li><strong>Air Quality Prediction:</strong> Built predictive models using decision trees, AdaBoost, and neural networks to forecast air pollution trends.</li>
-                </ul>
-            </div>
-            
-            <div class="skill-category">
-                <h3 class="category-title">Soft Skills</h3>
-                <ul class="skill-list">
-                    <li><strong>Strong Analytical & Problem-Solving Skills:</strong> Ability to derive insights from data to inform business and technical decisions.</li>
-                    <li><strong>Communication & Collaboration:</strong> Experience working with cross-functional teams and effectively documenting technical processes.</li>
-                    <li><strong>Project Management & Agile Methodologies:</strong> Familiar with Agile practices, strategic decision-making, and team coordination.</li>
-                </ul>
+            <div class="skills-categories">
+                <div class="skill-category">
+                    <h3 class="category-title">Technical Skills</h3>
+                    <ul class="skill-list">
+                        <li><strong>Programming & Data Analysis:</strong> Proficient in Python, R, SQL, SPSS, Minitab, and Microsoft Excel.</li>
+                        <li><strong>Machine Learning & AI:</strong> Experience in TensorFlow, predictive modeling, decision trees, neural networks, clustering, and transfer learning.</li>
+                        <li><strong>Database & Big Data Technologies:</strong> Knowledge of Snowflake, data warehousing, and data mining.</li>
+                        <li><strong>Visualization & Business Intelligence:</strong> Skilled in Tableau, data visualization, and strategic market analysis.</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="category-title">Professional Experience</h3>
+                    <ul class="skill-list">
+                        <li><strong>System Testing & Optimization:</strong> Developed dynamic scheduling forms, performed SQL-based data validation, and created anomaly detection models for personnel management.</li>
+                        <li><strong>Market Research & Strategic Planning:</strong> Conducted AI-related market analyses, evaluated digital economy trends, and identified technological strengths and weaknesses.</li>
+                        <li><strong>Project Leadership:</strong> Led AI-driven projects such as wildfire detection using MobileNetV2 and YOLOv8, as well as air quality forecasting with machine learning.</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="category-title">Project & Research Experience</h3>
+                    <ul class="skill-list">
+                        <li><strong>AI in Wildfire Detection:</strong> Designed an advanced wildfire detection system using deep learning models for real-time monitoring and emergency response.</li>
+                        <li><strong>Air Quality Prediction:</strong> Built predictive models using decision trees, AdaBoost, and neural networks to forecast air pollution trends.</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="category-title">Soft Skills</h3>
+                    <ul class="skill-list">
+                        <li><strong>Strong Analytical & Problem-Solving Skills:</strong> Ability to derive insights from data to inform business and technical decisions.</li>
+                        <li><strong>Communication & Collaboration:</strong> Experience working with cross-functional teams and effectively documenting technical processes.</li>
+                        <li><strong>Project Management & Agile Methodologies:</strong> Familiar with Agile practices, strategic decision-making, and team coordination.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
